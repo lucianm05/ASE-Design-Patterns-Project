@@ -1,3 +1,32 @@
+# EN
+
+Bachelor's degree final project topic: Disability-optimized component library implemented in React.js. Since design specific OOP patterns cannot be implemented in React.js, I decided to replicate some of the components in Java in a minimal form. These components have different methods, such as onClick, onChange, the equivalent of events that occur as a result of the interaction between the user and the web page in which they are used.
+
+The following design patterns are used in the project: Composite, State, Factory, Singleton, Observer, Facade, Decorator
+
+=================================================================================
+
+felice package - is represented by the component library:
+
+felice.select.composite: design pattern Composite - represented by the Item interface - Select and Option classes implement the Item interface, but only Select can have multiple Item leaf nodes
+
+felice.select.state: Design pattern State - State interface and StateOpen/StateClosed classes to determine whether select is closed or open; if select is closed, its value cannot be updated
+
+felice.form.factory: Design pattern Simple Factory + Singleton - to create multiple FormControl objects used to assemble forms
+
+felice.form.observer: Design pattern Observer - to notify the form when one of the FormControls changes its value
+
+=================================================================================
+
+proiect package - is represented by the use of the component library:
+
+proiect.select.facade: Design pattern Facade - the SelectFacade class has the selectOption method that receives a Select object and the desired option number; it presses the select to open it, then selects the desired option and closes the select
+
+proiect.select.decorator: Design pattern Decorator - abstract Decorator class implements the Item interface from felice.select.composite and has an attribute of type Select, to which it adds the functionality of closing after selecting an option
+
+
+# RO
+
 Tema licenței: Bibliotecă de componente optimizată pentru accesul persoanelor cu dizabilități, implementată în React.js. Întrucât design patternurile specifice OOP nu pot fi implementate în React.js, am decis să replic o parte dintre componente în Java, într-o formă minimală. Aceste componente au diferite metode, precum onClick, onChange, echivalentul evenimentelor apărute în urma interacțiunii dintre utilizator și pagina web în care sunt folosite.
 
 În proiect sunt folosite următoarele design patternuri: Composite, State, Factory, Singleton, Observer, Facade, Decorator
